@@ -4,10 +4,10 @@ list1 = []
 list2 = []
 for w in range(0,n):
   a = input("請輸入'稱號 數字'\n")
-  list1.append( abs(int(a[3:])-s))
-  list2.append( a[0:2] )
+  list1.extend( a.split(" "))
+  list2.append( abs(int(list1[w*2+1]) - s) )
 
 print ("=================")
 for w in range(0,n):
-  if list1[w] == sorted(list1)[n-1]:
-    print (list2[w] , "要喝金盃拉茶") 
+  if int(list2[w]) == sorted(list2)[n-1]:
+    print (list1[w*2] , "要喝金盃拉茶") 
